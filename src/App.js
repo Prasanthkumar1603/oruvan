@@ -1,53 +1,76 @@
- 
-
-import React from 'react';
+import React, { useEffect } from 'react';
 import Hero from './Components/hero';
 import About from './Components/About';
-import Skills from './Components/Skils';
-import Projects from './Components/Projects';
-import Experience from './Components/Experience';
+import Services from './Components/Projects';
 import Contact from './Components/Contact';
 import Header from './Components/Sidebar';
-import './App.css';
 import Footer from './Components/Footer';
-import { BrowserRouter as Router } from 'react-router-dom'; // Ensure Router is included
-import Certification from './Components/Certification';
  
+
+import './App.css';
+
+import { BrowserRouter as Router } from 'react-router-dom';
+
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 function App() {
+
+  useEffect(() => {
+
+    AOS.init({
+      duration: 1000,
+      once: false,
+      easing: 'ease-in-out',
+    });
+
+  }, []);
+
   return (
-    <Router> {/* Wrap your app in BrowserRouter */}
-      <div className="app-container">
-        {/* Header Navigation */}
+    <Router>
+
+<div className="app-container bg-[#050505] text-white">
         <Header />
 
-        {/* Main Content */}
         <main className="pt-16">
-          <section id="hero">
+
+          <section
+            id="hero"
+            data-aos="fade-up"
+          >
             <Hero />
           </section>
-          <section id="about" className="pt-6">
+
+          <section
+            id="projects"
+            className="pt-6"
+            data-aos="fade-up"
+          >
+            <Services />
+          </section>
+
+          <section
+            id="about"
+            className="pt-6"
+            data-aos="fade-right"
+          >
             <About />
           </section>
-          <section id="skills" className="pt-6">
-            <Skills />
-          </section>
-          <section id="projects" className="pt-6">
-            <Projects />
-          </section>
-          <section id="experience" className="pt-6">
-            <Experience />
-          </section>
-          <section id="certificate"className="pt-6">
-            <Certification/>
-          </section>
-          <section id="contact"className="pt-6">
+
+          <section
+            id="contact"
+            className="pt-6"
+            data-aos="zoom-in"
+          >
             <Contact />
           </section>
+
         </main>
 
-        {/* Footer */}
         <Footer />
+
       </div>
+
     </Router>
   );
 }

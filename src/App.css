@@ -1,29 +1,72 @@
- /* styles.css */
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-.animate-fadeIn {
-  animation: fadeIn 1s ease-in-out forwards; /* Adjust duration as needed */
+html {
+  scroll-behavior: smooth;
 }
 
  
-/* 🔹 Animated Gradient Background */
-@keyframes gradientMove {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+body {
+  margin: 0;
+  padding: 0;
+  background: #050505;
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
 }
 
-.bg-animated-gradient {
-  background: linear-gradient(-45deg, #3b82f6, #9333ea, #14b8a6, #f43f5e);
-  background-size: 400% 400%;
-  animation: gradientMove 10s ease infinite;
+#root {
+  background: #050505;
+}
+
+/* Optional smooth selection */
+::selection {
+  background: #ff0000;
+  color: white;
+}
+/* GRID BACKGROUND */
+.hero-grid {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+
+  background-size: 40px 40px;
+}
+
+
+/* HERO IMAGE REVEAL */
+.animate-heroReveal {
+  animation: heroReveal 1.8s ease forwards;
+}
+
+@keyframes heroReveal {
+
+  0% {
+    opacity: 0;
+    transform: scale(0.92);
+    filter: blur(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+
+}
+/* FLOAT ANIMATION */
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
 }
