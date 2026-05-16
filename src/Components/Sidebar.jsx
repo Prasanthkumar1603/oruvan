@@ -31,61 +31,55 @@ const Header = () => {
 
   return (
 
-    <header
-      className={`
-        fixed
-        top-0
-        left-0
-        w-full
-        z-50
-        transition-all
-        duration-500
-        px-2 md:px-6
-
-        ${scrolled
-          ? `
-            py-3
-          `
-          : `
-            py-0
- 
-          `
-        }
-      `}
-    >
-
-<div
+  <header
   className={`
-    max-w-7xl
-    mx-auto
-    flex
-    items-center
-    justify-between
+    fixed
+    top-0
+    left-0
+    w-full
+    z-50
     transition-all
     duration-500
-    border
 
     ${scrolled
-      ? `
-        bg-black/70
-        backdrop-blur-2xl
-        border-white/10
-        rounded-2xl
-        px-8
-        h-[78px]
-        shadow-[0_0_40px_rgba(255,0,0,0.06)]
-      `
-      : `
-  bg-black/20
-  backdrop-blur-md
-  border-transparent
-  px-6
-  h-[92px]
-      `
+      ? 'px-3 md:px-6 py-3'
+      : 'px-0 py-0'
     }
   `}
 >
-        {/* LOGO */}
+
+  <div
+    className={`
+      w-full
+      flex
+      items-center
+      justify-between
+      transition-all
+      duration-500
+      border
+
+      ${scrolled
+        ? `
+          bg-black/70
+          backdrop-blur-2xl
+          border-white/10
+          rounded-2xl
+          px-8
+          h-[78px]
+          shadow-[0_0_40px_rgba(255,0,0,0.06)]
+        `
+        : `
+          bg-black/30
+          backdrop-blur-md
+          border-b border-white/10
+          rounded-none
+          px-10 md:px-16 lg:px-24
+          h-[95px]
+        `
+      }
+    `}
+  >
+       {/* LOGO */}
         <a
           href="#hero"
           className="flex items-center gap-3"
@@ -95,8 +89,8 @@ const Header = () => {
   src={logo}
   alt="Oruvan Logo"
   className="
-  h-16
-  md:h-24
+  h-12
+  md:h-16
   object-contain
 "
 />

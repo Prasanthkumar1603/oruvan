@@ -175,31 +175,6 @@ const Contact = () => {
           "
         >
 
-          {/* SMALL BADGE */}
-          <div
-            className="
-              inline-flex
-              items-center
-              gap-2
-              px-4
-              py-2
-              rounded-full
-              bg-white/5
-              border
-              border-white/10
-              mb-8
-              w-fit
-            "
-          >
-
-            <span className="w-2 h-2 bg-red-500 rounded-full animate-pulse"></span>
-
-            <span className="text-sm text-gray-300">
-              Available For Freelance Projects
-            </span>
-
-          </div>
-
           {/* HEADING */}
           <h3 className="text-3xl md:text-4xl font-bold leading-tight mb-6">
 

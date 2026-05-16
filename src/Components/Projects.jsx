@@ -9,6 +9,7 @@ import {
   BadgeCheck,
   Megaphone,
   Layers3,
+  Video,
 } from 'lucide-react';
 
 const services = [
@@ -67,6 +68,12 @@ const services = [
     description:
       'Custom digital solutions for startups, freelancers, and growing businesses.',
   },
+  {
+    icon: <Video size={34} />,
+    title: 'AI Video Marketing',
+    description:
+      'AI-powered promotional reels, business ads, cinematic voice-over videos, and social media marketing content.',
+  }
 ];
 
 const Services = () => {

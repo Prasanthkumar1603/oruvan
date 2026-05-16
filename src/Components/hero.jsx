@@ -1,6 +1,6 @@
 import React from 'react';
 import { ReactTyped as Typed } from 'react-typed';
-import oruvanLogo from '../assets/heroimg.png';
+import oruvanLogo from '../assets/heroimg5.png';
 
 const Hero = () => {
   return (
@@ -62,7 +62,7 @@ const Hero = () => {
             mb-4
           "
         >
-          Oruvan Creative Studio
+          Oruvan Craft
         </p>
 
         {/* BADGE */}
@@ -237,13 +237,15 @@ const Hero = () => {
           src={oruvanLogo}
           alt="Oruvan Hero"
           className="
-relative
-w-full
-max-w-3xl
-object-contain
-animate-heroReveal
-drop-shadow-[0_0_40px_rgba(255,0,0,0.20)]
-"
+          relative
+          w-full
+          max-w-[700px]
+          xl:max-w-[850px]
+          2xl:max-w-[1000px]
+          object-contain
+          animate-heroReveal
+          drop-shadow-[0_0_40px_rgba(255,0,0,0.20)]
+          "
         />
 
       </div>

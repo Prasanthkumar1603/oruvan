@@ -5,6 +5,9 @@ import Services from './Components/Projects';
 import Contact from './Components/Contact';
 import Header from './Components/Sidebar';
 import Footer from './Components/Footer';
+import CursorEffect from './Components/CursorEffect';
+import 'react-toastify/dist/ReactToastify.css';
+
  
 
 import './App.css';
@@ -26,10 +29,13 @@ function App() {
 
   }, []);
 
+ 
+
   return (
     <Router>
 
 <div className="app-container bg-[#050505] text-white">
+<CursorEffect />
         <Header />
 
         <main className="pt-16">
